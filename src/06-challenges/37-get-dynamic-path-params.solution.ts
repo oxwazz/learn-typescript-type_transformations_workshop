@@ -11,6 +11,8 @@ type ExtractPathParams<TPath extends string> = {
     : never]: string;
 };
 
+type tes = ExtractPathParams<UserPath>;
+
 type tests = [
   Expect<Equal<ExtractPathParams<UserPath>, { id: string }>>,
   Expect<
@@ -18,5 +20,5 @@ type tests = [
       ExtractPathParams<UserOrganisationPath>,
       { id: string; organisationId: string }
     >
-  >,
+  >
 ];
